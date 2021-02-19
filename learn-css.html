@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style type="text/css">
+      .css-1st-class p {
+        color: orange;
+      }
+      /* 선택자가 tag : 모든 tag에 적용 */
+
+      #test-id {
+        color: blue;
+      }
+      /* 선택자가 id : 선택한 id에만 적용 */
+
+      .test-class {
+        color: red;
+      }
+      /* 선택자가 class : 선택된 class에 모두 적용 */
+
+      #id-test,
+      .class-test {
+        color: gray;
+      }
+      /* id와 class 동시에 사용도 가능 */
+
+      #item-list p {
+        color: yellow;
+      }
+      /* 하위선택자, item-list tag 안에 있는 tag중에 모든 p태그에 적용 */
+
+      #item-list > p {
+        color: green;
+      }
+      /* 자식선택자, item-list tag 안에 첫번째 자식만 대상으로 적용 */
+    </style>
+  </head>
+  <body>
+    <div class="css-1st-class">
+      <p>Hello Grabbbb</p>
+      <p class="test-class" id="test-id">Hello Guys</p>
+      <div id="test-id">id가 적용된다요</div>
+      <div class="test-class">class가 적용된다요</div>
+      <div class="test-class">class가 적용된다요</div>
+      <div class="class-test">class가 적용된다요</div>
+      <div id="id-test">class가 적용된다요</div>
+      <!-- tag, class, id 선택자 -->
+    </div>
+
+    <div class="css-2nd-class">
+      <div id="item-list">
+        <p>1st 자식 아이템1</p>
+        <p>1st 자식 아이템2</p>
+        <div>
+          <p>2nd 자식 아이템1</p>
+          <p>2nd 자식 아이템2</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
