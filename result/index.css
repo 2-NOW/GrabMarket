@@ -1,15 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 모든 태그를 선택함. */
+
 #header {
   height: 64px;
-  background-color: black;
+  border-bottom: 1px solid gray;
 }
 
 #body {
-  height: 100%;
-  /* 부모영역과 동일하게. body태그의 영역 */
-  background-color: blue;
+  min-height: 100vh;
   width: 1024px;
   margin: 0 auto;
   /* 부모로부터 가운데정렬이 됨 */
+  padding-bottom: 24px;
 }
 
 #footer {
@@ -20,4 +25,76 @@
 #banner {
   height: 300px;
   background-color: yellow;
+}
+
+#banner > img {
+  width: 100%;
+}
+
+#header-area {
+  width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  /* 가운데 정렬 */
+  display: flex;
+  align-items: center;
+}
+
+#header-area > img {
+  width: 128px;
+  height: 38px;
+}
+
+#body > h1 {
+  margin-top: 16px;
+}
+
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.product-card {
+  width: 180px;
+  height: 300px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 12px;
+  /* 이미지 모서리를 둥글게 */
+  overflow: hidden;
+  /* 이미지에 radius가 가려지는걸 해결 (이미지를 뒤쪽으로 배치) */
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+}
+
+.product-contents {
+  display: flex;
+  flex-direction: column;
+  /* span 수직정렬 */
+  padding: 8px;
+}
+
+.product-name {
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.product-seller {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.product-avatar {
+  width: 24px;
 }
