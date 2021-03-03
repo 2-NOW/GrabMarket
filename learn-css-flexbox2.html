@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      .parent {
+        display: flex;
+        /* 배치가 수평으로 바뀜 */
+        background-color: aqua;
+      }
+      /* parent class css */
+
+      .child {
+        color: white;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin-right: 8px;
+        border: 1px solid red;
+      }
+      /* child class css */
+      #child1 {
+        flex-basis: 100px;
+        /* child의 최소너비 설정 (수직정렬일때는 높이) 기본값 auto */
+        flex-grow: 1;
+        /* 여백이 생겼을 때 설정된 비율로 여백을 가져감. 기본은 0 */
+        flex-shrink: 1;
+        /* 줄어들었을 때 설정된 비율로 줄어듬 기본값 1*/
+      }
+
+      #child2 {
+        flex: 1 1 200px;
+        /* grow shrink basis 0, 1, auto 기본값*/
+      }
+
+      #child3 {
+        flex: 1;
+        /* flex-grow: 1; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div id="child1" class="child">자식</div>
+      <div id="child2" class="child">자식</div>
+      <div id="child3" class="child">자식</div>
+    </div>
+  </body>
+</html>
